@@ -31,7 +31,6 @@ dependencies:
   flutter_svg: ^0.22.0
   fl_chart: ^0.36.1
   provider: ^5.0.0
-  data_table_2: ^2.0.3
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +51,9 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/
+    - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
