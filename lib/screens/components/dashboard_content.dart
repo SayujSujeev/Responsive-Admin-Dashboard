@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_admin_dashboard/constants/constants.dart';
+import 'package:responsive_admin_dashboard/constants/responsive.dart';
+import 'package:responsive_admin_dashboard/screens/components/analytic_cards.dart';
 import 'package:responsive_admin_dashboard/screens/components/custom_appbar.dart';
+import 'package:responsive_admin_dashboard/screens/components/users.dart';
+
+import 'discussions.dart';
 
 class DashboardContent extends StatelessWidget {
   const DashboardContent({Key? key}) : super(key: key);
@@ -13,7 +18,37 @@ class DashboardContent extends StatelessWidget {
         child: Column(
           children: [
             CustomAppbar(),
-
+            SizedBox(
+              height: appPadding,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  flex: 5,
+                  child: Column(
+                    children: [
+                      AnalyticCards(),
+                      SizedBox(
+                        height: appPadding,
+                      ),
+                      Users(),
+                      if(Responsive.isMobile(context))
+                        SizedBox(height: appPadding,),
+                      if(Responsive.isMobile(context))
+                        Discussions(),
+                    ],
+                  ),
+                ),
+                if(!Responsive.isMobile(context))
+                  SizedBox(width: appPadding,),
+                if(!Responsive.isMobile(context))
+                Expanded(
+                  flex: 2,
+                  child: Discussions(),
+                ),
+              ],
+            ),
           ],
         ),
       ),
