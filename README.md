@@ -1,6 +1,6 @@
 # Responsive Admin Dashboard
 
-## [Watch it on YouTube](https://youtu.be/TkABIZWdaHw)
+## [Watch it on YouTube](https://youtu.be/MRiZpwdy1CM)
 
 
 Responsive Admin Dashboard UI using flutter,This project consist of responsive admin panel which can be run in desktop, tablet and mobile.
